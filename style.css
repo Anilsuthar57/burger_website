@@ -11,6 +11,7 @@ body {
     font-family: 'poppins', sans-serif;
     margin: 0;
     padding: 0;
+  
 }
 
 a {
@@ -69,7 +70,7 @@ main {
 /* section 2 */
 
 .section {
-    margin-top: 110px;
+    margin-top: 50px;
 }
 
 .section .img-container {
@@ -87,7 +88,7 @@ main {
 /* section3 */
 
 .section3 {
-    margin-top: 110px;
+    margin-top: 50px;
 }
 
 .section3 .img-container {
@@ -105,7 +106,7 @@ main {
 /* section4 */
 
 .section4 {
-    margin-top: 110px;
+    margin-top: 50px;
 }
 
 .section4 .img-container {
@@ -123,7 +124,7 @@ main {
 /* section5 */
 
 .section5 {
-    margin-top: 110px;
+    margin-top: 50px;
 }
 
 .section5 .img-container {
@@ -141,7 +142,7 @@ main {
 /* section6 */
 
 .section6 {
-    margin-top: 110px;
+    margin-top: 50px;
 }
 
 .section6 .img-container {
@@ -178,13 +179,22 @@ main {
 
 }
 
-.close-icon{
+.close-icon {
     position: absolute;
     top: 1px;
     right: 12px;
-    
+
     font-size: 25px;
     font-weight: 200;
+}
+
+.hamberger-menu {
+    display: none;
+
+}
+
+.close-icon {
+    display: none;
 }
 
 @media(max-width:1200px) {
@@ -199,7 +209,8 @@ main {
         margin-top: 100px;
         font-size: 18px;
     }
-    .close-icon{
+
+    .close-icon {
         display: none;
     }
 
@@ -225,15 +236,39 @@ main {
         margin-top: 80px;
         font-size: 13px;
     }
-    .close-icon{
+
+    .close-icon {
         display: none;
     }
 }
 
 @media(max-width:700px) {
-    .logo img {
-        width: 30px;
+    .hero-section {
+        margin-top: 50px;
     }
+    .logo img {
+        width: 40px;
+    }
+
+
+
+    .hamberger-menu {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 30px;
+        height: 47px;
+        width: 42px;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 0px 0px 0px 50px;
+    }
+
+    .hamberger-menu span {
+        top: 7px;
+        right: 7px;
+        position: absolute;
+    }
+
 
     header {
 
@@ -246,17 +281,21 @@ main {
 
     }
 
-
     nav {
         position: absolute;
         background-color: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(2px);
         flex-direction: column;
+        top: -125px;
         right: 0;
         max-width: 208px;
         height: 210px;
         margin: 150px 25px 0px 0px;
     }
 
+    .nav-content {
+        display: none;
+    }
     nav,
     a {
         margin-left: 31px;
@@ -303,16 +342,43 @@ main {
     .section6 span {
         font-size: 10px;
     }
-    .close-icon{
+
+    .close-icon {
         display: block;
     }
 }
 
-@media(max-width:390px) {
-    nav a{
-        display: none;
-        
+@media(max-width:389px) {
+    .hero-section {
+        margin-top: 0;
     }
+    .logo img {
+        width: 30px;
+    }
+
+    .hamberger-menu {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 30px;
+        height: 47px;
+        width: 42px;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 0px 0px 0px 50x;
+
+    }
+
+    .hamberger-menu span {
+        top: 7px;
+        right: 7px;
+        position: absolute;
+    }
+
+    nav {
+
+        backdrop-filter: blur(2px);
+    }
+
     header {
         height: 90px;
     }
